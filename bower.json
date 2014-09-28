@@ -1,0 +1,15 @@
+{
+    "name": "angular-express-seed",
+    "version": "0.0.0",
+    "homepage": "https://github.com/m-j/angular-express-seed",
+    "authors": [
+        "m-j <jamiolkowski.mateusz@gmail.com>"
+    ],
+    "license": "MIT",
+    "dependencies" : {
+        "angular" : "*",
+        "requirejs" : "*",
+        "ui-router" : "*",
+        "restangular" : "*"
+    }
+}

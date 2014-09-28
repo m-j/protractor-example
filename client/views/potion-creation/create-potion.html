@@ -1,0 +1,13 @@
+<div id="create-potion-view">
+    <h1>Create potion</h1>
+    <div>
+        <h2>Choose ingredient</h2>
+        <div ng-repeat="ingredient in availableIngredients" class="ingredient-picker">
+            <button ng-click="addIngredient(ingredient)">Add</button>
+            {{ ingredient.name }}
+        </div>
+    </div>
+    <div>
+        <potion-preview ng-model="currentPotion"/>
+    </div>
+</div>

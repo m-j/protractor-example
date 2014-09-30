@@ -9,9 +9,9 @@
         </div>
     </div>
     <div>
-        <pots-potion-preview ng-model="currentPotion"/>
+        <pots-potion-edit ng-model="currentPotion"/>
     </div>
     <div>
-        <button ng-if="currentPotion.ingredients.length > 0">Buy</button>
+        <button ng-if="currentPotion.ingredients.length > 0" ng-click="buy()">Buy</button>
     </div>
 </div>

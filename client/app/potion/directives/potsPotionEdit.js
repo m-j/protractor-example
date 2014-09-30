@@ -1,7 +1,7 @@
 define(['lodash'], function (_) {
-    var potionPreviewDirective = function () {
+    var potionEditDirective = function () {
         return {
-            templateUrl : '/views/potion-creation/potion-creation-directive.html',
+            templateUrl : '/views/potion/potion-creation-directive.html',
             link: function postLink(scope, iElement, iAttrs) {
 
             },
@@ -24,5 +24,5 @@ define(['lodash'], function (_) {
         }
     }
 
-    return potionPreviewDirective;
+    return potionEditDirective;
 });

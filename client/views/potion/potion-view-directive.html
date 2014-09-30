@@ -1,0 +1,6 @@
+<div>
+    <span ng-repeat="ingredient in potion.ingredients">
+        {{ingredient.name}} <span ng-show="ingredient.count > 1">({{ingredient.count}})</span>
+        <span ng-if="!$last">, </span>
+    </span>
+</div>

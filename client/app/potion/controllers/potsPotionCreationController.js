@@ -1,5 +1,5 @@
 define(function () {
-    var PotionCreationController = function ($scope, potsIngredientsRepository) {
+    var PotionCreationController = function ($scope, potsIngredientsRepository, $state, potsCartService) {
 
         $scope.addIngredient = function(ingredient){
             var matchingIngredient = $scope.currentPotion.ingredients.filter(function(item){
@@ -21,6 +21,11 @@ define(function () {
 
         $scope.currentPotion = {
             ingredients : []
+        }
+
+        $scope.buy = function(){
+            potsCartService.add($scope.currentPotion);
+            $state.transitionTo('order.summary')
         }
     }
 

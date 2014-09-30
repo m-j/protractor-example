@@ -13,6 +13,6 @@
         "restangular" : "*",
         "lodash" : "*",
         "ngstorage" : "*",
-        "lawnchair" : "*"
+        "amplify" : "*"
     }
 }

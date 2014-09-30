@@ -1,0 +1,17 @@
+<div id="payment">
+    <h1>Payment</h1>
+
+    <h2>Choose your payment method:</h2>
+    <ng-form>
+        <label><input type="radio" ng-model="paymentType" value="quick"/>Quick payment</label>
+        <label><input type="radio" ng-model="paymentType" value="credit card"/>Credit card</label>
+        <div ng-show="paymentType === 'credit card'">
+            <h3>Your credit card data</h3>
+            <label>Owner<input/></label>
+            <label>Credit car number<input/></label>
+            <label>CVV2<input/></label>
+        </div>
+
+        <div><button>Pay</button></div>
+    </ng-form>
+</div>

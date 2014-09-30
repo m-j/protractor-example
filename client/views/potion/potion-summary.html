@@ -1,0 +1,8 @@
+<div id="potion-summary">
+    <h1>Your potion order is:</h1>
+    <div ng-repeat="item in items">
+        <pots-potion-view ng-model="item"/>
+    </div>
+
+    <button ng-click="next()">Next</button>
+</div>

@@ -6,7 +6,7 @@ define(function(){
             .state('create-potion', {
                 url : '/create-potion',
                 templateUrl : '/views/potion-creation/create-potion.html',
-                controller : 'potionCreationController'
+                controller : 'potsPotionCreationController'
             })
     }
 })

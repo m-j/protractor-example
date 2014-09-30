@@ -10,6 +10,9 @@
         "angular" : "*",
         "requirejs" : "*",
         "ui-router" : "*",
-        "restangular" : "*"
+        "restangular" : "*",
+        "lodash" : "*",
+        "ngstorage" : "*",
+        "lawnchair" : "*"
     }
 }

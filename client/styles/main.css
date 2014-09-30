@@ -1,4 +1,52 @@
 .ingredient-picker {
     display: inline-block;
-    width: 200px;
+    width: 250px;
+    border-style: ridge;
+    height: 40px;
+    margin: 2px;
 }
+
+.ingredient-picker img {
+    float: right;
+}
+
+.action-button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-color: transparent;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.action-button:active {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-color: transparent;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    left: 2px;
+    position: relative;
+}
+
+.ingredient-picker button {
+    background-image: url("/images/icons/add.svg");
+}
+
+.remove-button {
+    background-image: url("/images/icons/close.svg");
+}
+
+.decrease-button {
+    background-image: url("/images/icons/minus.svg");
+}
+
+/*.ingredient-picker button:active  {*/
+    /*background-image: url("/images/icons/add.svg");*/
+
+/*}*/

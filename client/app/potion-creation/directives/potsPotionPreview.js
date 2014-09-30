@@ -1,4 +1,4 @@
-define(function () {
+define(['lodash'], function (_) {
     var potionPreviewDirective = function () {
         return {
             templateUrl : '/views/potion-creation/potion-creation-directive.html',
@@ -11,7 +11,15 @@ define(function () {
                 potion : '=ngModel'
             },
             controller: function($scope, $element, $attrs, $transclude){
+                $scope.decreaseCount = function(ingredeint){
+                    ingredeint.count--
+                }
 
+                $scope.removeIngredient = function(ingredient){
+                    _.remove($scope.potion.ingredients, function(item){
+                        return item.id === ingredient.id
+                    })
+                }
             }
         }
     }

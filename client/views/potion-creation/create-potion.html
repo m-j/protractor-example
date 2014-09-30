@@ -3,11 +3,15 @@
     <div>
         <h2>Choose ingredient</h2>
         <div ng-repeat="ingredient in availableIngredients" class="ingredient-picker">
-            <button ng-click="addIngredient(ingredient)">Add</button>
+            <button ng-click="addIngredient(ingredient)" class="action-button"></button>
             {{ ingredient.name }}
+            <img ng-src="{{ingredient.icon}}" width="30px"/>
         </div>
     </div>
     <div>
-        <potion-preview ng-model="currentPotion"/>
+        <pots-potion-preview ng-model="currentPotion"/>
+    </div>
+    <div>
+        <button ng-if="currentPotion.ingredients.length > 0">Buy</button>
     </div>
 </div>

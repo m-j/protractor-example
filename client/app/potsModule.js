@@ -11,6 +11,7 @@ define(['angular'
         , './potion/controllers/potsPaymentController'
         , './potion/services/potsWizardStateService'
         , './potion/controllers/potsOrderFinishController'
+        , './potion/repositories/potsOrderRepository'
     ]
     ,function(
         angular
@@ -26,6 +27,7 @@ define(['angular'
         , potsPaymentController
         , potsWizardStateService
         , potsOrderFinishController
+        , potsOrderRepository
         )
     {
         var potsModule = angular.module('pots', ['ui.router', 'restangular'])
@@ -42,4 +44,5 @@ define(['angular'
             .controller('potsPaymentController', potsPaymentController)
             .service('potsWizardStateService', potsWizardStateService)
             .controller('potsOrderFinishController', potsOrderFinishController)
+            .service('potsOrderRepository', potsOrderRepository)
 })

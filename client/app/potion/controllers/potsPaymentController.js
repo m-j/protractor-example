@@ -1,8 +1,17 @@
 define(function () {
-    var PotsPaymentController = function ($scope, potsWizardStateService, $state) {
+    var PotsPaymentController = function ($scope, potsCartService, potsOrderRepository, $state) {
         $scope.pay = function(){
-            potsWizardStateService.push($scope.payment)
-            $state.transitionTo('order.finish')
+            var items = potsCartService.getAll()
+
+            var order = {
+                payment : $scope.payment,
+                items : items
+            }
+
+            potsOrderRepository.place(order).then(function(result){
+                potsCartService.clear()
+                $state.transitionTo('order.finish')
+            })
         }
     }
 

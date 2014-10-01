@@ -13,7 +13,7 @@ define(['amplify-store'],function (store) {
         }
 
         this.clear = function(){
-
+            store(key, null)
         }
 
         this.getAll = function(){

@@ -9,6 +9,8 @@ define(['angular'
         , './potion/services/potsCartService'
         , './potion/directives/postPotionView'
         , './potion/controllers/potsPaymentController'
+        , './potion/services/potsWizardStateService'
+        , './potion/controllers/potsOrderFinishController'
     ]
     ,function(
         angular
@@ -22,6 +24,8 @@ define(['angular'
         , potsCartService
         , postPotionView
         , potsPaymentController
+        , potsWizardStateService
+        , potsOrderFinishController
         )
     {
         var potsModule = angular.module('pots', ['ui.router', 'restangular'])
@@ -36,4 +40,6 @@ define(['angular'
             .service('potsCartService', potsCartService)
             .directive('potsPotionView', postPotionView)
             .controller('potsPaymentController', potsPaymentController)
+            .service('potsWizardStateService', potsWizardStateService)
+            .controller('potsOrderFinishController', potsOrderFinishController)
 })

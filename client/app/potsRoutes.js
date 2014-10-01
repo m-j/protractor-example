@@ -30,6 +30,14 @@ define(function(){
                     }
                 }
             })
-
+            .state('order.finish', {
+                url : '/finish',
+                views : {
+                    '@' : {
+                        templateUrl: '/views/potion/order-finish.html',
+                        controller: 'potsOrderFinishController'
+                    }
+                }
+            })
     }
 })

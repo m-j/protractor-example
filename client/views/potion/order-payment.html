@@ -3,15 +3,15 @@
 
     <h2>Choose your payment method:</h2>
     <ng-form>
-        <label><input type="radio" ng-model="paymentType" value="quick"/>Quick payment</label>
-        <label><input type="radio" ng-model="paymentType" value="credit card"/>Credit card</label>
-        <div ng-show="paymentType === 'credit card'">
+        <label><input type="radio" ng-model="payment.type" value="quick"/>Quick payment</label>
+        <label><input type="radio" ng-model="payment.type" value="credit card"/>Credit card</label>
+        <div ng-show="payment.type === 'credit card'">
             <h3>Your credit card data</h3>
-            <label>Owner<input/></label>
-            <label>Credit car number<input/></label>
-            <label>CVV2<input/></label>
+            <label>Owner<input ng-model="payment.owner"/></label>
+            <label>Credit car number<input ng-model="payment.creditCardNumber"/></label>
+            <label ng-model="payment.cvv2">CVV2<input/></label>
         </div>
 
-        <div><button>Pay</button></div>
+        <div><button ng-click="pay()">Pay</button></div>
     </ng-form>
 </div>

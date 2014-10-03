@@ -6,6 +6,8 @@
         <tr ng-repeat="ingredient in potion.ingredients">
             <td>
                 {{ingredient.name}} <span ng-show="ingredient.count > 1">({{ingredient.count}})</span>
+            </td>
+            <td>
                 <button ng-click="decreaseCount(ingredient)" ng-show="ingredient.count > 1" class="action-button decrease-button"/>
                 <button ng-click="removeIngredient(ingredient)" ng-show="ingredient.count <= 1" class="action-button remove-button"/>
             </td>

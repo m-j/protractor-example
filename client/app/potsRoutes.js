@@ -39,5 +39,14 @@ define(function(){
                     }
                 }
             })
+            .state('order.fail', {
+                url : '/fail',
+                views : {
+                    '@' : {
+                        templateUrl: '/views/potion/order-fail.html',
+                        controller: function(){}
+                    }
+                }
+            })
     }
 })

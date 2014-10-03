@@ -11,6 +11,9 @@ define(function () {
             potsOrderRepository.place(order).then(function(result){
                 potsCartService.clear()
                 $state.transitionTo('order.finish')
+            },function(error){
+                potsCartService.clear()
+                $state.transitionTo('order.fail')
             })
         }
     }

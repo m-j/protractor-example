@@ -68,6 +68,10 @@
     filter: grayscale(100%);
 }
 
+.error {
+    color: red;
+}
+
 /*.ingredient-picker button:active  {*/
     /*background-image: url("/images/icons/add.svg");*/
 

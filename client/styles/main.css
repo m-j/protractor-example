@@ -2,7 +2,7 @@
     display: inline-block;
     width: 250px;
     border-style: ridge;
-    height: 40px;
+    height: 60px;
     margin: 2px;
 }
 
@@ -44,6 +44,28 @@
 
 .decrease-button {
     background-image: url("/images/icons/minus.svg");
+}
+
+.box-title {
+    font-size: 13pt;
+}
+
+.box-details {
+    font-size: 9pt;
+    display: inline-block;
+    text-spacing: none;
+}
+
+.box-details p{
+    text-spacing: none;
+}
+
+.gray-out {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 /*.ingredient-picker button:active  {*/

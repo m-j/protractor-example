@@ -2,14 +2,19 @@
     <h1>Create potion</h1>
     <div>
         <h2>Choose ingredient</h2>
-        <div ng-repeat="ingredient in availableIngredients" class="ingredient-picker">
-            <button ng-click="addIngredient(ingredient)" class="action-button"></button>
-            {{ ingredient.name }}
-            <img ng-src="{{ingredient.icon}}" width="30px"/>
+        <div ng-repeat="ingredient in availableIngredients" class="ingredient-picker" ng-class="{'gray-out': ingredient.quantity < 1}">
+            <div>
+                <button ng-click="addIngredient(ingredient)" class="action-button" ng-disabled="ingredient.quantity < 1"></button>
+                <span class="box-title">{{ ingredient.name }}</span>
+                <img ng-src="{{ingredient.icon}}" width="30px"/>
+            </div>
+            <div class="box-details">
+                Available: {{ingredient.quantity}}<br/>
+            </div>
         </div>
     </div>
     <div>
-        <pots-potion-edit ng-model="currentPotion"/>
+        <pots-potion-edit ng-model="currentPotion" ingredients="availableIngredients"/>
     </div>
     <div>
         <button ng-if="currentPotion.ingredients.length > 0" ng-click="buy()">Buy</button>

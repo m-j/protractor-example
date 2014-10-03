@@ -1,7 +1,11 @@
-define(function () {
+define(['lodash'],function (_) {
     var PotionCreationController = function ($scope, potsIngredientsRepository, $state, potsCartService) {
 
         $scope.addIngredient = function(ingredient){
+            if(ingredient.quantity < 1){
+                return
+            }
+
             var matchingIngredient = $scope.currentPotion.ingredients.filter(function(item){
                 return item.id === ingredient.id;
             })[0]
@@ -10,9 +14,12 @@ define(function () {
                 matchingIngredient.count ++
             }
             else {
-                ingredient.count = 1
-                $scope.currentPotion.ingredients.push(ingredient)
+                var clonedIngredient = _.cloneDeep(ingredient)
+                clonedIngredient.count = 1
+                $scope.currentPotion.ingredients.push(clonedIngredient)
             }
+
+            ingredient.quantity --
         }
 
         potsIngredientsRepository.getAll().then(function(ingredients){

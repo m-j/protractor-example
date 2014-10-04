@@ -15,23 +15,32 @@ describe('as a witcher I want to be able to choose elixir ingredients:', functio
         }
     }
 
-    iit('should allow to add ingredients to elixir by clicking on [+] button', function(){
-        var abominationLymphAddButton = element(by.repeater('ingredient in availableIngredients').row(0)).$('button')
-        var alpFangsAddButton = browser.findElement(by.xpath("//*[text()='Alp fangs']/../button"))
+    describe('when user clicks on [+] button', function(){
+        var potionTable
 
-        abominationLymphAddButton.click()
-        alpFangsAddButton.click()
-        alpFangsAddButton.click()
+        beforeEach(function(){
+            var abominationLymphAddButton = element(by.repeater('ingredient in availableIngredients').row(0)).$('button')
+            var alpFangsAddButton = browser.findElement(by.xpath("//*[text()='Alp fangs']/../button"))
 
-        var potionTable = [0,1].map(function(index){
-            return getPotionRow(index)
+            abominationLymphAddButton.click()
+            alpFangsAddButton.click()
+            alpFangsAddButton.click()
+
+            potionTable = [0,1].map(function(index){
+                return getPotionRow(index)
+            })
         })
 
-        expect(potionTable[0].name).toContain('Abomination lymph')
-        expect(potionTable[1].name).toContain('Alp fangs')
+        it('should add ingredients to elixir', function(){
+            expect(potionTable[0].name).toContain('Abomination lymph')
+            expect(potionTable[1].name).toContain('Alp fangs')
+        })
+
+
+        it('it should stack ingredients of the same type', function(){
+            expect(potionTable[1].count).toEqual('(2)')
+        })
+
     })
 
-    xit('when adding two ingredients of the same type it should stack them together', function(){
-
-    })
 })

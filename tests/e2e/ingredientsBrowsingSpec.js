@@ -13,7 +13,7 @@ describe('as a witcher I want to be able to view ingredients:', function(){
 
         })
 
-        it('should display list of available ingredients', function(){
+        it('should display ingredients fetched from sever', function(){
             proxy = new HttpBackend(browser, {buffer: true })
 
             var ingredients = [{"name":"Abomination lymph","icon":"/images/mixture-icons/Substances_Abomination_lymph.png","quantity":"6","id":0}]

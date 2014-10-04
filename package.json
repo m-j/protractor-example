@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/main.js",
-    "dev-start" : "nodemon ./server/main.js --watch server"
+    "dev-start": "nodemon ./server/main.js --watch server"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "serve-static": "^1.6.2"
   },
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "http-backend-proxy": "^1.4.1"
   }
 }

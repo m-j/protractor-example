@@ -13,6 +13,7 @@
         "restangular" : "*",
         "lodash" : "*",
         "ngstorage" : "*",
-        "amplify" : "*"
+        "amplify" : "*",
+        "angular-mocks" : "*"
     }
 }

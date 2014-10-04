@@ -23,10 +23,6 @@ describe('as a witcher I want to be able to choose elixir ingredients:', functio
         alpFangsAddButton.click()
         alpFangsAddButton.click()
 
-        // Doesn't work for directives :(
-        // var name = element(by.repeater('ingredient in potion.ingredients').row(0).column('{{ingredient.name}}'))
-        // var count = element(by.repeater('ingredient in potion.ingredients').row(0).column('{{ingredient.count}}'))
-
         var potionTable = [0,1].map(function(index){
             return getPotionRow(index)
         })

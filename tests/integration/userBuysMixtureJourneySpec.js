@@ -1,5 +1,8 @@
 describe('user buys mixture journey', function(){
     it('should let user buy mixture', function(){
+        // ** Sometimes tests have side effects
+        // ** Better IMO than testing single acceptance criteria
+
         browser.get('/')
         expect($('h1').getText()).toEqual('Create potion')
 
@@ -16,6 +19,7 @@ describe('user buys mixture journey', function(){
 
         $("a[ui-sref='create-potion']").click()
 
+        // ** It has side effects
         expect(element(by.xpath("//*[text()='Wing membrane']/../..")).$('div.box-details').getText()).toEqual('Available: 10')
     })
 

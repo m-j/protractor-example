@@ -18,10 +18,14 @@ describe('as a witcher I want to be able to view ingredients:', function(){
 
             var ingredients = [{"name":"Abomination lymph","icon":"/images/mixture-icons/Substances_Abomination_lymph.png","quantity":"6","id":0}]
 
+            // ** We have to specify this to let view to load
             proxy.onLoad.whenGET(/views\/.*/).passThrough()
 
             proxy.onLoad.whenGET('/api/ingredients').respond(200, ingredients)
             browser.get('/#/create-potion')
+
+            // ** Try with browser.pause()
+            // browser.pause()
 
             var ingredientsCount = element.all(by.repeater('ingredient in availableIngredients')).then(function(el) { return el.length })
             expect(ingredientsCount).toEqual(1)

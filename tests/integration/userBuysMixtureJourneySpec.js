@@ -1,5 +1,5 @@
 describe('user buys mixture journey', function(){
-    iit('should let user buy mixture', function(){
+    it('should let user buy mixture', function(){
         browser.get('/')
         expect($('h1').getText()).toEqual('Create potion')
 

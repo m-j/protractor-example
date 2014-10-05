@@ -4,7 +4,7 @@ describe('as a witcher I want to be able to view ingredients:', function(){
         expect(element(by.css('h1')).getText()).toBe('Create potion')
     })
 
-    describe('potion creatiin page', function(){
+    describe('potion creating page', function(){
         beforeEach(function(){
             browser.get('/#/create-potion');
         })

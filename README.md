@@ -5,16 +5,12 @@ Protractor example app for meetjs in Gdańsk
 
 ## Installation and running
 
-Install all node dependencies
-```npm install```
 
-Install bower if you don't have it
-```npm install -g bower```
+```
+npm install               #Install all node dependencies
+npm install -g bower      #Install bower if you don't have it
+bower install             #Install bower dependencies
+npm install -g protractor #Install protractor
 
-Install bower dependencies
-```bower install```
-
-Install protractor
-```npm install -g protractor```
-
+```
 

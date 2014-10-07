@@ -14,3 +14,15 @@ npm install -g protractor #Install protractor
 
 ```
 
+To run application type:
+```bash
+npm start
+```
+
+To run tests type:
+```bash
+protractor tests/protractor-e2e.conf.js
+#or
+protractor tests/protractor-integration.conf.js
+```
+

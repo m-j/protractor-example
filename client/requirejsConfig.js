@@ -3,7 +3,7 @@ requirejs.config({
         "angular" : "libs/angular/angular",
         "restangular" : "libs/restangular/dist/restangular",
         "ui-router" : "libs/ui-router/release/angular-ui-router",
-        "lodash" : "libs/lodash/dist/lodash",
+        "lodash" : "libs/lodash/lodash",
         "amplify-store" : "libs/amplify/lib/amplify.store",
         "angular-mocks" : 'libs/angular-mocks/angular-mocks'
     },
